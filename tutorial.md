@@ -100,4 +100,7 @@ When displayed the webpage it should look like following.
 ![flexbox in html](./screenshots/flex%20row.png)
 
 To change the layout simply change the flex-direction ``` flex-direction: column; ```. This will cause the items to display as a stack of rows and the column will fill the parent elements size.
+
 ![flexbox columns](./screenshots/flex%20column.png)
+
+To format a page we will use these basics with a few added attributes.  
