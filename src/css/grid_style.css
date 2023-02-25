@@ -1,0 +1,67 @@
+
+.heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  /*aligns items in the main axis */
+        align-items: center;
+        background-color: rgb(48, 197, 125);
+        
+
+}
+
+nav{
+        font-style: normal;
+        font-size: 1.5em;
+        background-color: rgb(245, 248, 48);
+       
+
+}
+a {
+        color:black;
+        text-decoration: none;
+        padding: 1.5pt;
+ }
+
+
+.border{
+        border-radius:25pt;
+        border-style: solid;
+        border-width: 8px;
+        border-color:rgb(42, 30, 73);
+        padding: 1pt;
+}
+.navBorder{
+        border-radius:12pt;
+        border-style: solid;
+        border-width: 6px;
+        border-color:rgb(42, 30, 73);
+        padding: 1pt;
+}
+
+.contentBorder{
+        border-radius:15pt;
+        border-style: solid;
+        border-width: 6px;
+        border-color:rgb(42, 30, 73);
+        padding: 1pt;
+}
+
+.main{
+        display: flex;
+        flex-direction:row;
+        box-sizing:border-box;
+}
+
+.aside{
+        flex-direction: column;
+        flex: 20%;
+}
+
+.middle{
+        flex-direction: column;
+        flex: 50%;
+}
+
+p {
+    padding: .5em;    
+}
