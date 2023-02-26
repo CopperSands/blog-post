@@ -103,4 +103,46 @@ To change the layout simply change the flex-direction ``` flex-direction: column
 
 ![flexbox columns](./screenshots/flex%20column.png)
 
-To format a page we will use these basics with a few added attributes.  
+To format a page we will use these basics with a few added attributes. We will use two main containers to format the page. One will contain the header and the other the main content of the body. For our example we will use a the column flex-direction in the header and a row flex direction for the body. The body will contain three flex items. There will be two asides and one larger item in the middle for the main content of the page. Each of these items will be flex containers with the flex direction set to column to store paragraphs images or other content verically. This is example of how to format the heading. In this cause I used created a heading class.
+
+```css
+    .heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(48, 197, 125);  
+}
+```
+The ``` align-items:center;``` attribute centers the items in the column if the flex-diection was set to row and you wanted to center the child elements you would need to set ```justify-content: center;  ```. This attribute centers the items in the main axis of the page. For a more comprehensive knowledge of aligning items in flexbox visit <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">this mozilla page.</a> The we will want to create a flex container for our main body. In our case our's will be fairly simple.
+
+```css
+    .main{
+        display: flex;
+        flex-direction:row;
+        box-sizing:border-box;
+    }
+```
+For the items in the main body we can asign what percentage of the row any individual item occupies. We do this using the flex property. It is important to note that padding and margins of elements can contribute the overall length of the row and change how your layout displays. For my asides I will assign ``` flex: 20%; ``` and in my middle item I will assign ```flex:50%;``` this ensures that the middle will be bigger than the side columns. Giving the clases for your asides and middle items the properties ``` display:flex; 
+flex-direction:column;``` creates redundancy if any of the children of the item are inline by default. You will also want to add some padding to text elements to prevent text from coliding between columns. Alternatively the padding can be put in the aside and middle item classes.
+
+This will give you the basic grid display.
+
+![basic grid display](./screenshots/grid_no_borders.png)
+
+Personally I like borders on my display. I will not cover borders any more than I already have on this post but have fun experimenting with border shapes and sizes. 
+
+## Other Resources
+
+Flexbox has many other capabilites that I have not discussed here. There are many places to learn more about how to better utizile this technology. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox is a great place to get started. Mozilla contains detailed documentation of the flexbox attributes and can help you understand how these attributes work together. While you can research different formatting attributes and cobble then together for your own Frankenstein creation, a solid understanding of flex and its attributes will help you avoid unexpected displays.
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ demonstrates the unique ways flexbox can be used to format elements via alignment and spacing.
+
+https://www.geeksforgeeks.org/introduction-to-css-flexbox/ is another introduction guide to flexbox if you feel the need to consult another tutorial.
+
+https://sharkcoder.com/layout/flexbox is a detailed beginners guide and is more in depth on layout features of flex like wraping rows and specifying how flex items should shrink or grow.
+
+https://www.w3schools.com/css/css3_flexbox_responsive.asp this resource gives examples of how to change css format of a page at different screen sizes. This is useful because one css sheet can different syles for mobile and full sized screens. 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container this link gives a detailed description of the alignment of items on the cross axis and main axis. This page can be useful if you are confused about which attributes and settings will put your ideal format on the page.
+
+

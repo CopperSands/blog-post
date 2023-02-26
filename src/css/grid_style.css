@@ -2,11 +2,9 @@
 .heading{
         display: flex;
         flex-direction: column;
-        justify-content: center;  /*aligns items in the main axis */
+        /*justify-content: center;  aligns items in the main axis */
         align-items: center;
-        background-color: rgb(48, 197, 125);
-        
-
+        background-color: rgb(48, 197, 125);  
 }
 
 nav{
@@ -53,15 +51,25 @@ a {
 }
 
 .aside{
+        display:flex;
         flex-direction: column;
         flex: 20%;
+         
 }
 
 .middle{
+        display:flex;
         flex-direction: column;
         flex: 50%;
+         
 }
 
 p {
-    padding: .5em;    
+    padding: .5em;   
+}
+
+img {
+        max-height:100%;
+        max-width: 100%;
+
 }
